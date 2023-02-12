@@ -3,4 +3,130 @@
 body {
   font-family: "Montserrat";
   font-size: 10px;
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 10px;
+
+  @media screen and (min-width: 1000px) {
+    padding-right: 60px;
+  }
+
+  &__burger {
+    position: relative;
+    z-index: 10;
+    width: 40px;
+    cursor: pointer;
+
+    @media screen and (min-width: 1000px) {
+      display: none;
+    }
+
+    &::before,
+    &::after,
+    & div {
+      background-color: $textColor;
+      content: "";
+      display: block;
+      height: 6px;
+      border-radius: 3px;
+      margin: 7px 0;
+      transition: 0.5s;
+    }
+
+    &--active::before,
+    &--active::after,
+    &--active div {
+      background-color: white;
+    }
+
+    &--active::before {
+      transform: translateY(12px) rotate(135deg);
+    }
+    &--active::after {
+      transform: translateY(-12px) rotate(-135deg);
+    }
+    &--active div {
+      transform: scale(0);
+    }
+  }
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background: $main;
+  list-style-type: none;
+
+  @media screen and (min-width: 1000px) {
+    position: unset;
+    flex-direction: row;
+    gap: 5rem;
+    background: transparent;
+    height: 100%;
+    transform: translateX(0);
+    width: max-content;
+  }
+
+  &--active {
+    transform: translateX(0);
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__link {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+
+    @media screen and (min-width: 1000px) {
+      color: $textColor;
+      font-weight: normal;
+      font-size: 1.5rem;
+
+      &--contact {
+        color: white;
+        background: $main;
+        padding: 5px 25px;
+        border-radius: 15px;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        height: 2px;
+        width: 0;
+        background-color: $textColor;
+        transition: all 0.2s ease-in-out;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
 }

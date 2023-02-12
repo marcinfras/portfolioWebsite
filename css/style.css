@@ -9,4 +9,120 @@
 body {
   font-family: "Montserrat";
   font-size: 10px;
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 10px;
+}
+@media screen and (min-width: 1000px) {
+  .header {
+    padding-right: 60px;
+  }
+}
+.header__burger {
+  position: relative;
+  z-index: 10;
+  width: 40px;
+  cursor: pointer;
+}
+@media screen and (min-width: 1000px) {
+  .header__burger {
+    display: none;
+  }
+}
+.header__burger::before, .header__burger::after, .header__burger div {
+  background-color: #4c4486;
+  content: "";
+  display: block;
+  height: 6px;
+  border-radius: 3px;
+  margin: 7px 0;
+  transition: 0.5s;
+}
+.header__burger--active::before, .header__burger--active::after, .header__burger--active div {
+  background-color: white;
+}
+.header__burger--active::before {
+  transform: translateY(12px) rotate(135deg);
+}
+.header__burger--active::after {
+  transform: translateY(-12px) rotate(-135deg);
+}
+.header__burger--active div {
+  transform: scale(0);
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to left bottom, #7d62f2, #7f65ee, #8168ea, #836ae6, #856de2, #8a6cdc, #8f6bd6, #936ad0, #9a65c7, #9f60be, #a45bb5, #a757ac);
+  list-style-type: none;
+}
+@media screen and (min-width: 1000px) {
+  .menu {
+    position: unset;
+    flex-direction: row;
+    gap: 5rem;
+    background: transparent;
+    height: 100%;
+    transform: translateX(0);
+    width: -moz-max-content;
+    width: max-content;
+  }
+}
+.menu--active {
+  transform: translateX(0);
+}
+.menu__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.menu__link {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 1000px) {
+  .menu__link {
+    color: #4c4486;
+    font-weight: normal;
+    font-size: 1.5rem;
+  }
+  .menu__link--contact {
+    color: white;
+    background: linear-gradient(to left bottom, #7d62f2, #7f65ee, #8168ea, #836ae6, #856de2, #8a6cdc, #8f6bd6, #936ad0, #9a65c7, #9f60be, #a45bb5, #a757ac);
+    padding: 5px 25px;
+    border-radius: 15px;
+  }
+  .menu__link--contact::after {
+    display: none;
+  }
+  .menu__link::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #4c4486;
+    transition: all 0.2s ease-in-out;
+  }
+  .menu__link:hover::after {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
