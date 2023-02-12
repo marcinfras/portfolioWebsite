@@ -125,4 +125,67 @@ body {
   .menu__link:hover::after {
     width: 100%;
   }
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 35px auto 0 auto;
+}
+.home__img {
+  width: 100%;
+  max-width: 700px;
+}
+.home__name {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #26224b;
+}
+.home__proffesion {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4c4486;
+}
+.home__links {
+  display: flex;
+  gap: 5px;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 10px auto 0 auto;
+  background: linear-gradient(to left bottom, #7d62f2, #7f65ee, #8168ea, #836ae6, #856de2, #8a6cdc, #8f6bd6, #936ad0, #9a65c7, #9f60be, #a45bb5, #a757ac);
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.home__icon {
+  cursor: pointer;
+}
+.home__slider {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: 30px;
+  width: 18px;
+  height: 50px;
+  border: 1px solid #4c4486;
+  background-color: transparent;
+  border-radius: 10px;
+}
+.home__slider::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(to left bottom, #7d62f2, #7f65ee, #8168ea, #836ae6, #856de2, #8a6cdc, #8f6bd6, #936ad0, #9a65c7, #9f60be, #a45bb5, #a757ac);
+  animation: slide 0.6s infinite alternate-reverse ease-in-out;
+}
+@keyframes slide {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-200%);
+  }
 }/*# sourceMappingURL=style.css.map */
