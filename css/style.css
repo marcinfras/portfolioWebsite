@@ -6,6 +6,15 @@
 }
 
 /* Colors Hover */
+.section-titleColor {
+  position: relative;
+  background: linear-gradient(to right bottom, #fd4d3e, #fe315c, #f61a7a, #e51b97, #c830b3);
+  font-size: 2rem;
+  padding: 5px;
+  border-top-left-radius: 10px;
+  color: white;
+}
+
 body {
   font-family: "Montserrat";
   font-size: 10px;
@@ -235,4 +244,87 @@ body {
   100% {
     transform: translateY(-200%);
   }
+}
+
+.projects {
+  margin-top: 100px;
+}
+.projects__title {
+  text-align: center;
+  font-weight: bold;
+  color: #4c4486;
+}
+.projects__title-p {
+  display: inline-block;
+}
+.projects__title-span {
+  font-size: 1.3rem;
+}
+.projects__cards {
+  display: grid;
+  padding: 0 20px;
+}
+
+.card {
+  width: 70%;
+  margin: 50px auto 0 auto;
+  box-shadow: 0px 0px 7px -4px rgb(200, 200, 200);
+  padding: 10px 5px;
+}
+@media screen and (min-width: 600px) {
+  .card {
+    width: 60%;
+  }
+}
+.card__img {
+  display: block;
+  width: 85%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 750px) {
+  .card__img {
+    width: 60%;
+  }
+}
+.card__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.card__title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #4c4486;
+  border-bottom: 1px solid black;
+  padding-right: 1.2rem;
+}
+.card__link {
+  display: block;
+  width: 1.2rem;
+}
+.card__link img {
+  width: 100%;
+}
+.card__description {
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  padding-bottom: 5px;
+}
+.card__tech {
+  font-weight: bold;
+  color: #4c4486;
+  font-size: 0.8rem;
+  border-bottom: 1px solid black;
+  width: -moz-max-content;
+  width: max-content;
+  padding-right: 2rem;
+}
+.card__icons {
+  padding-top: 5px;
+  display: flex;
+  gap: 8px;
+}
+.card__icon {
+  width: 25px;
 }/*# sourceMappingURL=style.css.map */
