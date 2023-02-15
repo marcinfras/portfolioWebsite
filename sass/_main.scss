@@ -250,21 +250,34 @@ body {
     font-weight: bold;
     color: $textColor;
 
+    @media screen and (min-width: 1000px) {
+      margin-bottom: 100px;
+    }
+
     &-p {
       display: inline-block;
     }
 
     &-span {
       font-size: 1.3rem;
+      @media screen and (min-width: 1000px) {
+        font-size: 1.8rem;
+      }
     }
   }
 
   &__cards {
     display: grid;
-    padding: 0 20px;
-    // @media screen and (min-width: 750px) {
-    //   grid-template-columns: 1fr 1fr;
-    // }
+    margin: 0 20px;
+    @media screen and (min-width: 1000px) {
+      grid-template-columns: 1fr 1fr;
+      row-gap: 50px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 75%;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -275,7 +288,11 @@ body {
   padding: 10px 5px;
 
   @media screen and (min-width: 600px) {
-    width: 60%;
+    width: 70%;
+  }
+
+  @media screen and (min-width: 1000px) {
+    margin: 0px auto;
   }
 
   &__img {
@@ -301,6 +318,10 @@ body {
     color: $textColor;
     border-bottom: 1px solid black;
     padding-right: 1.2rem;
+
+    @media screen and (min-width: 1000px) {
+      font-size: 1.3rem;
+    }
   }
 
   &__link {
@@ -309,12 +330,20 @@ body {
     img {
       width: 100%;
     }
+
+    @media screen and (min-width: 1000px) {
+      width: 1.3rem;
+    }
   }
 
   &__description {
     font-size: 0.8rem;
     line-height: 1.1rem;
     padding-bottom: 5px;
+
+    @media screen and (min-width: 1000px) {
+      font-size: 0.9rem;
+    }
   }
 
   &__tech {
@@ -324,6 +353,10 @@ body {
     border-bottom: 1px solid black;
     width: max-content;
     padding-right: 2rem;
+
+    @media screen and (min-width: 1000px) {
+      font-size: 0.9rem;
+    }
   }
 
   &__icons {

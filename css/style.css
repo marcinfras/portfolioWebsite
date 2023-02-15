@@ -14,6 +14,11 @@
   border-top-left-radius: 10px;
   color: white;
 }
+@media screen and (min-width: 1000px) {
+  .section-titleColor {
+    font-size: 2.4rem;
+  }
+}
 
 body {
   font-family: "Montserrat";
@@ -254,15 +259,37 @@ body {
   font-weight: bold;
   color: #4c4486;
 }
+@media screen and (min-width: 1000px) {
+  .projects__title {
+    margin-bottom: 100px;
+  }
+}
 .projects__title-p {
   display: inline-block;
 }
 .projects__title-span {
   font-size: 1.3rem;
 }
+@media screen and (min-width: 1000px) {
+  .projects__title-span {
+    font-size: 1.8rem;
+  }
+}
 .projects__cards {
   display: grid;
-  padding: 0 20px;
+  margin: 0 20px;
+}
+@media screen and (min-width: 1000px) {
+  .projects__cards {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects__cards {
+    width: 75%;
+    margin: 0 auto;
+  }
 }
 
 .card {
@@ -273,7 +300,12 @@ body {
 }
 @media screen and (min-width: 600px) {
   .card {
-    width: 60%;
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .card {
+    margin: 0px auto;
   }
 }
 .card__img {
@@ -299,6 +331,11 @@ body {
   border-bottom: 1px solid black;
   padding-right: 1.2rem;
 }
+@media screen and (min-width: 1000px) {
+  .card__title {
+    font-size: 1.3rem;
+  }
+}
 .card__link {
   display: block;
   width: 1.2rem;
@@ -306,10 +343,20 @@ body {
 .card__link img {
   width: 100%;
 }
+@media screen and (min-width: 1000px) {
+  .card__link {
+    width: 1.3rem;
+  }
+}
 .card__description {
   font-size: 0.8rem;
   line-height: 1.1rem;
   padding-bottom: 5px;
+}
+@media screen and (min-width: 1000px) {
+  .card__description {
+    font-size: 0.9rem;
+  }
 }
 .card__tech {
   font-weight: bold;
@@ -319,6 +366,11 @@ body {
   width: -moz-max-content;
   width: max-content;
   padding-right: 2rem;
+}
+@media screen and (min-width: 1000px) {
+  .card__tech {
+    font-size: 0.9rem;
+  }
 }
 .card__icons {
   padding-top: 5px;
