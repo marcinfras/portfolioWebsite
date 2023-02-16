@@ -382,6 +382,7 @@ body {
   text-align: center;
   font-weight: bold;
   color: #4c4486;
+  width: 100%;
 }
 .about__title-span {
   font-size: 1.3rem;
@@ -391,10 +392,33 @@ body {
     font-size: 1.8rem;
   }
 }
-.about__content {
+@media screen and (min-width: 1000px) {
+  .about__content {
+    display: flex;
+    gap: 30px;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .about__content {
+    width: 75%;
+  }
+}
+.about__text {
   margin: 50px auto 30px auto;
   width: 80%;
   text-align: justify;
+}
+@media screen and (min-width: 1000px) {
+  .about__text {
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about__text {
+    transform: translateY(10%);
+  }
 }
 .about__description {
   font-size: 1rem;
@@ -402,13 +426,34 @@ body {
   color: #4c4486;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 1400px) {
+  .about__description {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
+}
 .about__quote {
   font-size: 0.9rem;
   color: rgb(139, 139, 139);
+}
+@media screen and (min-width: 1400px) {
+  .about__quote {
+    font-size: 1rem;
+  }
 }
 .about__img {
   display: block;
   width: 75%;
   max-width: 550px;
   margin: 0 auto;
+}
+@media screen and (min-width: 1000px) {
+  .about__img {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .about__img {
+    max-width: 600px;
+  }
 }/*# sourceMappingURL=style.css.map */

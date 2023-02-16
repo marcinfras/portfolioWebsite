@@ -369,6 +369,7 @@ body {
     text-align: center;
     font-weight: bold;
     color: $textColor;
+    width: 100%;
 
     &-span {
       font-size: 1.3rem;
@@ -379,9 +380,30 @@ body {
   }
 
   &__content {
+    @media screen and (min-width: 1000px) {
+      display: flex;
+      gap: 30px;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    @media screen and (min-width: 1400px) {
+      width: 75%;
+    }
+  }
+
+  &__text {
     margin: 50px auto 30px auto;
     width: 80%;
     text-align: justify;
+
+    @media screen and (min-width: 1000px) {
+      margin: 0 auto;
+    }
+
+    @media screen and (min-width: 1200px) {
+      transform: translateY(10%);
+    }
   }
 
   &__description {
@@ -389,11 +411,20 @@ body {
     line-height: 1.5rem;
     color: $textColor;
     margin-bottom: 20px;
+
+    @media screen and (min-width: 1400px) {
+      font-size: 1.2rem;
+      line-height: 1.7rem;
+    }
   }
 
   &__quote {
     font-size: 0.9rem;
     color: rgb(139, 139, 139);
+
+    @media screen and (min-width: 1400px) {
+      font-size: 1rem;
+    }
   }
 
   &__img {
@@ -401,5 +432,13 @@ body {
     width: 75%;
     max-width: 550px;
     margin: 0 auto;
+
+    @media screen and (min-width: 1000px) {
+      width: 50%;
+    }
+
+    @media screen and (min-width: 1400px) {
+      max-width: 600px;
+    }
   }
 }
