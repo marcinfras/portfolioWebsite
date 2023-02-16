@@ -7,6 +7,7 @@
 
 /* Colors Hover */
 .section-titleColor {
+  display: inline-block;
   position: relative;
   background: linear-gradient(to right bottom, #fd4d3e, #fe315c, #f61a7a, #e51b97, #c830b3);
   font-size: 2rem;
@@ -17,6 +18,7 @@
 @media screen and (min-width: 1000px) {
   .section-titleColor {
     font-size: 2.4rem;
+    margin-bottom: 100px;
   }
 }
 
@@ -259,14 +261,6 @@ body {
   font-weight: bold;
   color: #4c4486;
 }
-@media screen and (min-width: 1000px) {
-  .projects__title {
-    margin-bottom: 100px;
-  }
-}
-.projects__title-p {
-  display: inline-block;
-}
 .projects__title-span {
   font-size: 1.3rem;
 }
@@ -379,4 +373,42 @@ body {
 }
 .card__icon {
   width: 25px;
+}
+
+.about {
+  margin-top: 100px;
+}
+.about__title {
+  text-align: center;
+  font-weight: bold;
+  color: #4c4486;
+}
+.about__title-span {
+  font-size: 1.3rem;
+}
+@media screen and (min-width: 1000px) {
+  .about__title-span {
+    font-size: 1.8rem;
+  }
+}
+.about__content {
+  margin: 50px auto 30px auto;
+  width: 80%;
+  text-align: justify;
+}
+.about__description {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #4c4486;
+  margin-bottom: 20px;
+}
+.about__quote {
+  font-size: 0.9rem;
+  color: rgb(139, 139, 139);
+}
+.about__img {
+  display: block;
+  width: 75%;
+  max-width: 550px;
+  margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */

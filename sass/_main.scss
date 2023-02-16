@@ -250,14 +250,6 @@ body {
     font-weight: bold;
     color: $textColor;
 
-    @media screen and (min-width: 1000px) {
-      margin-bottom: 100px;
-    }
-
-    &-p {
-      display: inline-block;
-    }
-
     &-span {
       font-size: 1.3rem;
       @media screen and (min-width: 1000px) {
@@ -367,5 +359,47 @@ body {
 
   &__icon {
     width: 25px;
+  }
+}
+
+.about {
+  margin-top: 100px;
+
+  &__title {
+    text-align: center;
+    font-weight: bold;
+    color: $textColor;
+
+    &-span {
+      font-size: 1.3rem;
+      @media screen and (min-width: 1000px) {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  &__content {
+    margin: 50px auto 30px auto;
+    width: 80%;
+    text-align: justify;
+  }
+
+  &__description {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: $textColor;
+    margin-bottom: 20px;
+  }
+
+  &__quote {
+    font-size: 0.9rem;
+    color: rgb(139, 139, 139);
+  }
+
+  &__img {
+    display: block;
+    width: 75%;
+    max-width: 550px;
+    margin: 0 auto;
   }
 }
