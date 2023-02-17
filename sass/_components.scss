@@ -1,14 +1,55 @@
-.section-titleColor {
-  display: inline-block;
+.title {
   position: relative;
-  background: $secondary;
-  font-size: 2rem;
-  padding: 5px;
-  border-top-left-radius: 10px;
-  color: white;
+  text-align: center;
+  font-weight: bold;
+  color: $textColor;
+  width: 100%;
+  margin-bottom: 70px;
 
   @media screen and (min-width: 1000px) {
-    font-size: 2.4rem;
     margin-bottom: 100px;
+  }
+
+  &__p {
+    display: inline-block;
+    background: $secondary;
+    font-size: 2rem;
+    padding: 5px;
+    border-top-left-radius: 10px;
+    color: white;
+
+    @media screen and (min-width: 1000px) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__span {
+    position: relative;
+    font-size: 1.3rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 105%;
+      top: 105%;
+      width: 12px;
+      height: 12px;
+      background: $secondary;
+      animation: 1s titleShadow infinite alternate ease-in-out;
+    }
+
+    @keyframes titleShadow {
+      0% {
+        box-shadow: $shadowAnimationStart;
+      }
+
+      100% {
+        box-shadow: $shadowAnimationEnd;
+      }
+    }
+
+    @media screen and (min-width: 1000px) {
+      font-size: 1.8rem;
+    }
   }
 }
