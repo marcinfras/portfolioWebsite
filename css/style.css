@@ -76,6 +76,7 @@ body {
   background-color: white;
   height: 80px;
   padding: 0 10px;
+  transition: 0.3s;
 }
 .header--active {
   box-shadow: rgba(0, 0, 0, 0.062) 0px 3px 5px;
